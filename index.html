@@ -19,13 +19,21 @@
 </head>
 <body>
 
-<!-- 科技感背景层 -->
-<div class="tech-bg">
-    <div class="grid-pattern"></div>
-    <div class="glow-orb glow-1"></div>
-    <div class="glow-orb glow-2"></div>
-    <div class="glow-orb glow-3"></div>
-    <div class="particle-field" id="particles"></div>
+<!-- 星空背景层 -->
+<div class="starfield">
+    <div class="stars stars-small"></div>
+    <div class="stars stars-medium"></div>
+    <div class="stars stars-large"></div>
+    <div class="shooting-stars">
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+    </div>
+    <div class="nebula nebula-1"></div>
+    <div class="nebula nebula-2"></div>
+    <div class="nebula nebula-3"></div>
 </div>
 
 <a id="home" class="anchor"></a>
@@ -252,22 +260,30 @@
 </div>
 
 <script>
-// 粒子效果
-function createParticles() {
-    const container = document.getElementById('particles');
-    if (!container) return;
+// 星星生成
+function createStarfield() {
+    const layers = [
+        { selector: '.stars-small', count: 200, size: 1 },
+        { selector: '.stars-medium', count: 100, size: 2 },
+        { selector: '.stars-large', count: 50, size: 3 }
+    ];
 
-    for (let i = 0; i < 30; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.top = Math.random() * 100 + '%';
-        particle.style.animationDelay = Math.random() * 8 + 's';
-        particle.style.animationDuration = (8 + Math.random() * 12) + 's';
-        container.appendChild(particle);
-    }
+    layers.forEach(layer => {
+        const container = document.querySelector(layer.selector);
+        if (!container) return;
+
+        let boxShadow = '';
+        for (let i = 0; i < layer.count; i++) {
+            const x = Math.random() * 2000;
+            const y = Math.random() * 2000;
+            const opacity = 0.3 + Math.random() * 0.7;
+            if (i > 0) boxShadow += ', ';
+            boxShadow += `${x}px ${y}px 0 ${opacity < 0.5 ? 'rgba(200,210,255,0.3)' : 'rgba(255,255,255,0.8)'}`;
+        }
+        container.style.boxShadow = boxShadow;
+    });
 }
-createParticles();
+createStarfield();
 </script>
 
 </body>
