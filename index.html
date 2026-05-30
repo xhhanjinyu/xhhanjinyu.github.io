@@ -12,138 +12,263 @@
 <!-- ✅ 引入 Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <title>Jinyu Han</title>
 
 </head>
 <body>
 
-<!-- 左侧装饰 -->
-<div class="side-decor side-decor-left">
-    <div class="decor-circle decor-1"></div>
-    <div class="decor-circle decor-2"></div>
-    <div class="decor-circle decor-3"></div>
-    <div class="decor-line decor-line-1"></div>
-    <div class="decor-line decor-line-2"></div>
-</div>
-
-<!-- 右侧装饰 -->
-<div class="side-decor side-decor-right">
-    <div class="decor-circle decor-1"></div>
-    <div class="decor-circle decor-2"></div>
-    <div class="decor-circle decor-3"></div>
-    <div class="decor-line decor-line-1"></div>
-    <div class="decor-line decor-line-2"></div>
+<!-- 科技感背景层 -->
+<div class="tech-bg">
+    <div class="grid-pattern"></div>
+    <div class="glow-orb glow-1"></div>
+    <div class="glow-orb glow-2"></div>
+    <div class="glow-orb glow-3"></div>
+    <div class="particle-field" id="particles"></div>
 </div>
 
 <a id="home" class="anchor"></a>
 <div id="container">
 <div class="container">
 
-<table class="imgtable">
-<tr>
-<td> <a href="./"><img src="./Figures/jyhan.jpg" alt="" height="180px" /></a>&nbsp;</td>
-<td align="left">
-<p>
-<font size="4"><b>Jinyu Han (韩金雨)</b></font><br />
-<br />
-<i class="fa-solid fa-graduation-cap icon"></i>&nbsp;Ph.D.<br />
-<br />
-<i class="fa-solid fa-university icon"></i>&nbsp;School of Computer Science and Engineering <br />
-<i class="fa-solid fa-globe icon"></i>&nbsp;Nanjing University of Science and Technology<br />
-<br />
-<i class="fa-solid fa-envelope icon"></i>&nbsp;Email: <a href="mailto:hanjinyu@njust.edu.cn">hanjinyu@njust.edu.cn</a>
-<br />
-[<a  href="https://scholar.google.com/citations?user=vjqtXegAAAAJ&hl=en" target="_blank">Google Scholar</a>]
-[<a  href="https://github.com/hjy0518" target="_blank">Github</a>]
-[<a href="https://orcid.org/0009-0005-8484-8889" target="_blank">ORCID</a>]
-[<a href="https://dblp.org/pid/48/2931.html" target="_blank">DBLP</a>]
-</p>
-</td>
-</tr></table>
+<!-- 头部个人介绍区域 -->
+<header class="hero-section">
+    <div class="hero-content">
+        <div class="avatar-wrapper">
+            <div class="avatar-ring"></div>
+            <a href="./"><img src="./Figures/jyhan.jpg" alt="Jinyu Han" class="avatar-img" /></a>
+            <div class="avatar-status">
+                <span class="status-dot"></span>
+                <span class="status-text">Open to collaborate</span>
+            </div>
+        </div>
 
+        <div class="hero-info">
+            <div class="name-badge">
+                <h1 class="hero-name">Jinyu Han <span class="chinese-name">韩金雨</span></h1>
+                <div class="badge-row">
+                    <span class="badge badge-phd"><i class="fa-solid fa-graduation-cap"></i> Ph.D. Candidate</span>
+                    <span class="badge badge-lab"><i class="fa-solid fa-flask"></i> IMAG Lab</span>
+                </div>
+            </div>
 
- <!--
-  <div class="infoblock">
-    <div class="blocktitle"></div>
-    <div class="blockcontent">
-      <p><b><img src="Figures/new.gif"> <font color=red> 博一在读，欢迎交流！（2026.05）</font></b></p>
+            <div class="info-grid">
+                <div class="info-card">
+                    <i class="fa-solid fa-university info-icon"></i>
+                    <div>
+                        <div class="info-label">Affiliation</div>
+                        <div class="info-value">School of Computer Science and Engineering</div>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-globe info-icon"></i>
+                    <div>
+                        <div class="info-label">University</div>
+                        <div class="info-value">Nanjing University of Science and Technology</div>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-envelope info-icon"></i>
+                    <div>
+                        <div class="info-label">Email</div>
+                        <div class="info-value"><a href="mailto:hanjinyu@njust.edu.cn">hanjinyu@njust.edu.cn</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="https://scholar.google.com/citations?user=vjqtXegAAAAJ&hl=en" target="_blank" class="social-btn">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Google Scholar</span>
+                </a>
+                <a href="https://github.com/hjy0518" target="_blank" class="social-btn">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://orcid.org/0009-0005-8484-8889" target="_blank" class="social-btn">
+                    <i class="fa-brands fa-orcid"></i>
+                    <span>ORCID</span>
+                </a>
+                <a href="https://dblp.org/pid/48/2931.html" target="_blank" class="social-btn">
+                    <i class="fa-solid fa-database"></i>
+                    <span>DBLP</span>
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
--->
+</header>
 
-<h2><i class="fa-solid fa-user icon"></i>&nbsp;Biography</h2>
-<p style="text-align:justify">
-I am currently a final-year Ph.D. candidate at Intelligent Media Analysis Group (IMAG Lab), School of Computer Science and Engineering, Nanjing University of Science and Technology (NJUST), under the supervision of Prof. <a href="https://imag-njust.net/author/jinhui-tang//" target="_blank"> Jinhui Tang</a>. My research interests include image processing and computer vision, with a primary focus on video/image segmentation problems. If you are interested in my research, please feel free to contact me (with any questions, suggestions, or requests for collaboration).
-</p>
+<!-- Biography Section -->
+<section class="section">
+    <div class="section-header">
+        <div class="section-icon"><i class="fa-solid fa-user"></i></div>
+        <h2>Biography</h2>
+        <div class="section-line"></div>
+    </div>
+    <div class="section-content">
+        <p style="text-align:justify">
+        I am currently a final-year Ph.D. candidate at Intelligent Media Analysis Group (IMAG Lab), School of Computer Science and Engineering, Nanjing University of Science and Technology (NJUST), under the supervision of Prof. <a href="https://imag-njust.net/author/jinhui-tang//" target="_blank"> Jinhui Tang</a>. My research interests include image processing and computer vision, with a primary focus on video/image segmentation problems. If you are interested in my research, please feel free to contact me (with any questions, suggestions, or requests for collaboration).
+        </p>
+    </div>
+</section>
 
-<h2><i class="fa-regular fa-bell icon"></i>&nbsp;News</h2>
-<ul>
-<li>[05/2026] One paper is accepted by TGRS 2026. </li>
-<li>[04/2026] One paper is accepted by IJCAI 2026. </li>
-<li>[02/2026] One paper is accepted by CVPR 2026. </li>
-<li>[09/2025] One paper is accepted by TMM 2025.  </li>
-<li>[07/2025] One paper is accepted by TGRS 2025. </li>
-<li>[06/2025] One paper is accepted by TGRS 2025. </li>
-<li>[01/2022] One paper is accepted by ESWA 2025. </li>
-</ul>
+<!-- News Section -->
+<section class="section">
+    <div class="section-header">
+        <div class="section-icon"><i class="fa-regular fa-bell"></i></div>
+        <h2>News</h2>
+        <div class="section-line"></div>
+    </div>
+    <div class="section-content">
+        <div class="news-timeline">
+            <div class="news-item">
+                <div class="news-date">05/2026</div>
+                <div class="news-dot"></div>
+                <div class="news-content">One paper is accepted by <strong>TGRS 2026</strong></div>
+            </div>
+            <div class="news-item">
+                <div class="news-date">04/2026</div>
+                <div class="news-dot"></div>
+                <div class="news-content">One paper is accepted by <strong>IJCAI 2026</strong></div>
+            </div>
+            <div class="news-item">
+                <div class="news-date">02/2026</div>
+                <div class="news-dot"></div>
+                <div class="news-content">One paper is accepted by <strong>CVPR 2026</strong></div>
+            </div>
+            <div class="news-item">
+                <div class="news-date">09/2025</div>
+                <div class="news-dot"></div>
+                <div class="news-content">One paper is accepted by <strong>TMM 2025</strong></div>
+            </div>
+            <div class="news-item">
+                <div class="news-date">07/2025</div>
+                <div class="news-dot"></div>
+                <div class="news-content">One paper is accepted by <strong>TGRS 2025</strong></div>
+            </div>
+            <div class="news-item">
+                <div class="news-date">06/2025</div>
+                <div class="news-dot"></div>
+                <div class="news-content">One paper is accepted by <strong>TGRS 2025</strong></div>
+            </div>
+            <div class="news-item">
+                <div class="news-date">01/2025</div>
+                <div class="news-dot"></div>
+                <div class="news-content">One paper is accepted by <strong>ESWA 2025</strong></div>
+            </div>
+        </div>
+    </div>
+</section>
 
-<!-- Project -->
+<!-- Publications Section -->
 <a id="publications" class="anchor"></a>
-<h2><i class="fa-solid fa-book icon"></i>&nbsp;Selected Publications
-<a style="color:Black" class="p1" href="https://scholar.google.com/citations?user=MM-gGRwAAAAJ&hl=zh-CN" target="_blank">
-    <font size="2"> [Full List]</font></a> <font size="2">(^Co-first author; *Corresponding author)</font>
-</h2>
+<section class="section">
+    <div class="section-header">
+        <div class="section-icon"><i class="fa-solid fa-book"></i></div>
+        <h2>Selected Publications</h2>
+        <a href="https://scholar.google.com/citations?user=MM-gGRwAAAAJ&hl=zh-CN" target="_blank" class="view-all-btn">
+            View All <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <div class="section-line"></div>
+    </div>
+    <p class="pub-note">(^Co-first author; *Corresponding author)</p>
 
-<table class="imgtable">
+    <div class="pub-grid">
+        <div class="pub-card">
+            <div class="pub-img-wrapper">
+                <img class="pub-img" src="./Figures/H2Net.png" alt="H2Net" />
+                <div class="pub-overlay">
+                    <span class="pub-venue">IJCAI 2026</span>
+                </div>
+            </div>
+            <div class="pub-info">
+                <h3 class="pub-title">H2Net: Homo- and Heterogeneous Networks for Unified Segmentation</h3>
+                <p class="pub-authors"><b>Jinyu Han</b>, Changguang Wu, Fuming Sun, Mengyin Wang, Jinhui Tang*</p>
+                <div class="pub-links">
+                    <a href="https://h2net-ijcai26.github.io/" target="_blank" class="pub-link">
+                        <i class="fa-solid fa-file-pdf"></i> Paper
+                    </a>
+                    <a href="https://github.com/hjy0518/H2Net" target="_blank" class="pub-link">
+                        <i class="fa-brands fa-github"></i> Code
+                    </a>
+                </div>
+            </div>
+        </div>
 
+        <div class="pub-card">
+            <div class="pub-img-wrapper">
+                <img class="pub-img" src="./Figures/DepthSAM.png" alt="DepthSAM" />
+                <div class="pub-overlay">
+                    <span class="pub-venue">CVPR 2026</span>
+                </div>
+            </div>
+            <div class="pub-info">
+                <h3 class="pub-title">Beyond Appearance: Camouflaged Object Detection via Geometric Structure</h3>
+                <p class="pub-authors"><b>Jinyu Han^</b>, Changguang Wu^, Fuming Sun, Jinhui Tang*</p>
+                <div class="pub-links">
+                    <a href="https://depthsam.github.io/" target="_blank" class="pub-link">
+                        <i class="fa-solid fa-file-pdf"></i> Paper
+                    </a>
+                    <a href="https://github.com/hjy0518/DepthSAM" target="_blank" class="pub-link">
+                        <i class="fa-brands fa-github"></i> Code
+                    </a>
+                </div>
+            </div>
+        </div>
 
-<tr>
-<td><img class="proj_thumb" src="./Figures/H2Net.png" alt="" height="90px" width="180px" />&nbsp;</td>
-<td>
-<p class="pub_title">H2Net: Homo- and Heterogeneous Networks for Unified Segmentation</p>
-<p class="pub_author"><b>Jinyu Han</b>, Changguang Wu, Fuming Sun, Mengyin Wang, Jinhui Tang*<br>
-International Joint Conference on Artificial Intelligence (<b>IJCAI</b>), 2026.<br>
-[<a href="https://h2net-ijcai26.github.io/" target="_blank">Paper</a>]
-[<a href="https://github.com/hjy0518/H2Net" target="_blank">Code</a>]
-</p> </td>
-</tr>
+        <div class="pub-card">
+            <div class="pub-img-wrapper">
+                <img class="pub-img" src="./Figures/UNet.png" alt="UTNet" />
+                <div class="pub-overlay">
+                    <span class="pub-venue">TMM 2025</span>
+                </div>
+            </div>
+            <div class="pub-info">
+                <h3 class="pub-title">A UNet-like Transformer Network for Camouflaged Object Detection</h3>
+                <p class="pub-authors">Fuming Sun, <b>Jinyu Han</b>, Weiyi Wu, Jing Sun, Mengyin Wang*, Haojie Li</p>
+                <div class="pub-links">
+                    <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11175541" target="_blank" class="pub-link">
+                        <i class="fa-solid fa-file-pdf"></i> Paper
+                    </a>
+                    <a href="https://github.com/hjy0518/UTNet" target="_blank" class="pub-link">
+                        <i class="fa-brands fa-github"></i> Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-<tr>
-<td><img class="proj_thumb" src="./Figures/DepthSAM.png" alt="" height="90px" width="180px" />&nbsp;</td>
-<td>
-<p class="pub_title">Beyond Appearance: Camouflaged Object Detection via Geometric Structure</p>
-<p class="pub_author"><b>Jinyu Han^</b>, Changguang Wu^, Fuming Sun, Jinhui Tang*<br>
-IEEE Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>), 2026.<br>
-[<a href="https://depthsam.github.io/" target="_blank">Paper</a>]
-[<a href="https://github.com/hjy0518/DepthSAM" target="_blank">Code</a>]
-</p> </td>
-</tr>
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-line"></div>
+        <p>© 2026 Jinyu Han &nbsp;|&nbsp; Last updated: May 2026</p>
+    </div>
+</footer>
 
-
-<tr>
-<td><img class="proj_thumb" src="./Figures/UNet.png" alt="" height="90px" width="180px" />&nbsp;</td>
-<td>
-<p class="pub_title">A unet-like transformer network for camouflaged object detection</p>
-<p class="pub_author">Fuming Sun, <b>Jinyu Han</b>, Weiyi Wu, Jing Sun, Mengyin Wang*, Haojie Li<br>
-IEEE Transactions on Multimedia (<b>TMM</b>), 2025.<br>
-[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11175541" target="_blank">Paper</a>]
-[<a href="https://github.com/hjy0518/UTNet" target="_blank">Code</a>]
-</p> </td>
-</tr>
-
-
-
-</table>
-
-<div id="footer">
-<div id="footer-text">
-<p style="text-align: center; color: #a0aec0; font-size: 13px;">
-    © 2026 Jinyu Han &nbsp;|&nbsp; Last updated: May 2026
-</p>
 </div>
 </div>
+
+<script>
+// 粒子效果
+function createParticles() {
+    const container = document.getElementById('particles');
+    if (!container) return;
+
+    for (let i = 0; i < 30; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 8 + 's';
+        particle.style.animationDuration = (8 + Math.random() * 12) + 's';
+        container.appendChild(particle);
+    }
+}
+createParticles();
+</script>
 
 </body>
 </html>
