@@ -46,7 +46,7 @@
     max-height: 999999px;
     margin: 56px auto 20px;
     text-align: left;
-    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 50%, #93c5fd 100%);
+    background: linear-gradient(135deg, rgba(219, 234, 254, 0.82) 0%, rgba(191, 219, 254, 0.82) 50%, rgba(147, 197, 253, 0.82) 100%);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     padding: 40px 50px;
