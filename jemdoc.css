@@ -595,4 +595,159 @@ html {
         width: 95%;
         padding: 20px;
     }
+    .side-decor {
+        display: none;
+    }
+}
+
+/* ============================================
+   Side Decorations
+   ============================================ */
+
+.side-decor {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.side-decor-left {
+    left: 0;
+}
+
+.side-decor-right {
+    right: 0;
+}
+
+.decor-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.15;
+}
+
+.side-decor-left .decor-1 {
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    top: 15%;
+    left: -40px;
+    animation: float-left 8s ease-in-out infinite;
+}
+
+.side-decor-left .decor-2 {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    top: 55%;
+    left: 20px;
+    animation: float-left 10s ease-in-out infinite 2s;
+}
+
+.side-decor-left .decor-3 {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    top: 80%;
+    left: -20px;
+    animation: float-left 7s ease-in-out infinite 4s;
+}
+
+.side-decor-right .decor-1 {
+    width: 160px;
+    height: 160px;
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+    top: 20%;
+    right: -30px;
+    animation: float-right 9s ease-in-out infinite 1s;
+}
+
+.side-decor-right .decor-2 {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    top: 50%;
+    right: 30px;
+    animation: float-right 8s ease-in-out infinite 3s;
+}
+
+.side-decor-right .decor-3 {
+    width: 140px;
+    height: 140px;
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+    top: 75%;
+    right: -50px;
+    animation: float-right 11s ease-in-out infinite 5s;
+}
+
+.decor-line {
+    position: absolute;
+    opacity: 0.08;
+}
+
+.side-decor-left .decor-line-1 {
+    width: 2px;
+    height: 200px;
+    background: linear-gradient(to bottom, transparent, #667eea, transparent);
+    top: 30%;
+    left: 80px;
+    animation: line-pulse 6s ease-in-out infinite;
+}
+
+.side-decor-left .decor-line-2 {
+    width: 2px;
+    height: 150px;
+    background: linear-gradient(to bottom, transparent, #764ba2, transparent);
+    top: 65%;
+    left: 50px;
+    animation: line-pulse 8s ease-in-out infinite 2s;
+}
+
+.side-decor-right .decor-line-1 {
+    width: 2px;
+    height: 180px;
+    background: linear-gradient(to bottom, transparent, #a18cd1, transparent);
+    top: 25%;
+    right: 70px;
+    animation: line-pulse 7s ease-in-out infinite 1s;
+}
+
+.side-decor-right .decor-line-2 {
+    width: 2px;
+    height: 160px;
+    background: linear-gradient(to bottom, transparent, #fbc2eb, transparent);
+    top: 60%;
+    right: 100px;
+    animation: line-pulse 9s ease-in-out infinite 3s;
+}
+
+@keyframes float-left {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+@keyframes float-right {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-25px) rotate(-5deg);
+    }
+}
+
+@keyframes line-pulse {
+    0%, 100% {
+        opacity: 0.06;
+        transform: scaleY(1);
+    }
+    50% {
+        opacity: 0.12;
+        transform: scaleY(1.1);
+    }
 }
