@@ -19,35 +19,31 @@
 </head>
 <body>
 
-<!-- 花朵背景层 -->
-<div class="flower-bg">
-    <!-- 左侧花朵 -->
-    <div class="flower flower-1">🌸</div>
-    <div class="flower flower-2">🌷</div>
-    <div class="flower flower-3">🌺</div>
-    <div class="flower flower-4">🌼</div>
-    <div class="flower flower-5">💐</div>
-    <div class="flower flower-6">🌿</div>
-    <div class="flower flower-7">🍃</div>
-
-    <!-- 右侧花朵 -->
-    <div class="flower flower-8">🌸</div>
-    <div class="flower flower-9">🌷</div>
-    <div class="flower flower-10">🌺</div>
-    <div class="flower flower-11">🌼</div>
-    <div class="flower flower-12">💮</div>
-    <div class="flower flower-13">🏵️</div>
-    <div class="flower flower-14">🌱</div>
-
-    <!-- 装饰光点 -->
-    <div class="sparkle sparkle-1">✦</div>
-    <div class="sparkle sparkle-2">✧</div>
-    <div class="sparkle sparkle-3">✦</div>
-    <div class="sparkle sparkle-4">✧</div>
-    <div class="sparkle sparkle-5">✦</div>
-    <div class="sparkle sparkle-6">✧</div>
-    <div class="sparkle sparkle-7">✦</div>
-    <div class="sparkle sparkle-8">✧</div>
+<!-- 星空背景层 -->
+<div class="starfield">
+    <div class="stars stars-small"></div>
+    <div class="stars stars-medium"></div>
+    <div class="stars stars-large"></div>
+    <div class="shooting-stars">
+        <!-- 蓝色流星 -->
+        <div class="shooting-star color-blue"></div>
+        <div class="shooting-star color-blue"></div>
+        <div class="shooting-star color-blue"></div>
+        <!-- 紫色流星 -->
+        <div class="shooting-star color-purple"></div>
+        <div class="shooting-star color-purple"></div>
+        <!-- 青色流星 -->
+        <div class="shooting-star color-cyan"></div>
+        <div class="shooting-star color-cyan"></div>
+        <!-- 粉色流星 -->
+        <div class="shooting-star color-pink"></div>
+        <div class="shooting-star color-pink"></div>
+        <!-- 金色流星 -->
+        <div class="shooting-star color-gold"></div>
+        <!-- 白色流星 -->
+        <div class="shooting-star color-white"></div>
+        <div class="shooting-star color-white"></div>
+    </div>
 </div>
 
 <a id="home" class="anchor"></a>
@@ -272,6 +268,33 @@
 
 </div>
 </div>
+
+<script>
+// 星星生成
+function createStarfield() {
+    const layers = [
+        { selector: '.stars-small', count: 200, size: 1 },
+        { selector: '.stars-medium', count: 100, size: 2 },
+        { selector: '.stars-large', count: 50, size: 3 }
+    ];
+
+    layers.forEach(layer => {
+        const container = document.querySelector(layer.selector);
+        if (!container) return;
+
+        let boxShadow = '';
+        for (let i = 0; i < layer.count; i++) {
+            const x = Math.random() * 2000;
+            const y = Math.random() * 2000;
+            const opacity = 0.3 + Math.random() * 0.7;
+            if (i > 0) boxShadow += ', ';
+            boxShadow += `${x}px ${y}px 0 ${opacity < 0.5 ? 'rgba(200,210,255,0.3)' : 'rgba(255,255,255,0.8)'}`;
+        }
+        container.style.boxShadow = boxShadow;
+    });
+}
+createStarfield();
+</script>
 
 </body>
 </html>
