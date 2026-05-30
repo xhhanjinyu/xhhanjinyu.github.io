@@ -19,31 +19,31 @@
 </head>
 <body>
 
-<!-- 星空背景层 -->
-<div class="starfield">
-    <div class="stars stars-small"></div>
-    <div class="stars stars-medium"></div>
-    <div class="stars stars-large"></div>
-    <div class="shooting-stars">
-        <!-- 蓝色流星 -->
-        <div class="shooting-star color-blue"></div>
-        <div class="shooting-star color-blue"></div>
-        <div class="shooting-star color-blue"></div>
-        <!-- 紫色流星 -->
-        <div class="shooting-star color-purple"></div>
-        <div class="shooting-star color-purple"></div>
-        <!-- 青色流星 -->
-        <div class="shooting-star color-cyan"></div>
-        <div class="shooting-star color-cyan"></div>
-        <!-- 粉色流星 -->
-        <div class="shooting-star color-pink"></div>
-        <div class="shooting-star color-pink"></div>
-        <!-- 金色流星 -->
-        <div class="shooting-star color-gold"></div>
-        <!-- 白色流星 -->
-        <div class="shooting-star color-white"></div>
-        <div class="shooting-star color-white"></div>
-    </div>
+    
+<!-- 浅色花卉背景 -->
+<div class="floral-bg">
+    <!-- 鲜花装饰 -->
+    <div class="flower flower-rose"></div>
+    <div class="flower flower-lavender"></div>
+    <div class="flower flower-daisy"></div>
+    <div class="flower flower-peach"></div>
+    <div class="flower flower-rose"></div>
+    <div class="flower flower-lavender"></div>
+    <div class="flower flower-daisy"></div>
+    <div class="flower flower-peach"></div>
+    <div class="flower flower-rose"></div>
+    <div class="flower flower-lavender"></div>
+    <div class="flower flower-daisy"></div>
+    <div class="flower flower-peach"></div>
+    <!-- 飘落的花瓣 -->
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
 </div>
 
 <a id="home" class="anchor"></a>
@@ -270,30 +270,7 @@
 </div>
 
 <script>
-// 星星生成
-function createStarfield() {
-    const layers = [
-        { selector: '.stars-small', count: 200, size: 1 },
-        { selector: '.stars-medium', count: 100, size: 2 },
-        { selector: '.stars-large', count: 50, size: 3 }
-    ];
-
-    layers.forEach(layer => {
-        const container = document.querySelector(layer.selector);
-        if (!container) return;
-
-        let boxShadow = '';
-        for (let i = 0; i < layer.count; i++) {
-            const x = Math.random() * 2000;
-            const y = Math.random() * 2000;
-            const opacity = 0.3 + Math.random() * 0.7;
-            if (i > 0) boxShadow += ', ';
-            boxShadow += `${x}px ${y}px 0 ${opacity < 0.5 ? 'rgba(200,210,255,0.3)' : 'rgba(255,255,255,0.8)'}`;
-        }
-        container.style.boxShadow = boxShadow;
-    });
-}
-createStarfield();
+// 花卉主题无需额外JS
 </script>
 
 </body>
